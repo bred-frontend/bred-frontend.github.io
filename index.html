@@ -1,3 +1,80 @@
-<h1>coming soon</h1>
-<p>last updated jun 3 2021</p>
-<p><b>66181c0f6c13e08d03fe030263f153e69ab65c219ab3c0a276ac73c854b4e20d</b></p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="nuclear launch codes" property="og:title">
+	<meta content="idk i'll use this for something at some point" property="og:description">
+	<meta content="nuclear-launch.codes" property="og:url">
+	<meta content="https://luphoria.github.io/resources/luphoria.png" property="og:image">
+	<meta content="#770077" data-react-helmet="true" name="theme-color">
+    <title>bred</title>
+    <script type="module" src="https://luphoria.github.io/index.js"></script>
+    <style>
+      body {
+        overflow:hidden;
+        cursor:pointer
+      }
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        margin: 0px;
+        max-width:100%
+      }
+      .title {
+        font-weight:1000;
+      }
+      #textContainer {
+        width:100%;
+        font-family:"Arial", sans-serif;
+        color: #ffffff;
+        text-align:center;
+        font-size: 5vh;
+      }
+      a {
+        color:white;
+        font-family:'Courier New', Courier, monospace;
+      }
+      #projects {
+        visibility: hidden;
+      }
+      .big {
+        font-size: 5vh;
+      }
+      .medium {
+        font-size: 3vh;
+      }
+      .tiny {
+        font-size: 1.5vh;
+      }
+    </style>
+</head>
+<script>
+  function go(type,url) {
+    switch(type) {
+      case "womginx":
+        let proxy = "//uberbread.herokuapp.com/main/go/"
+        break
+      case "alloy":
+        let proxy = "https://uberalloy.herokuapp.com/web/_"
+        break
+    }
+    document.body.innerHTML = '<body style="margin:0px;padding:0px;overflow:hidden"><iframe src="' + proxy + url + '" id="uberFrame" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe></body>'
+</script>
+<body id="container">
+  <div id="textContainer">
+    <img src="https://luphoria.github.io/resources/luphoria.png" height="200" width="200"/>
+    <div class="title">bred</div>
+    <div id="tohide">
+      <div class="medium">
+        <input type='text' placeholder='https://www.google.com/' id='url-target' ></input><br /><br />
+      <div class="big"><a href="#" onclick=`go("womginx",document.getElementById("url-target"))`>womginx</a> or <a href="#" onclick=`go("womginx",btoa(document.getElementById("url-target")))`>alloy</a></div><br/><br/>
+    </div>
+  </div>
+</body>
+</html>
